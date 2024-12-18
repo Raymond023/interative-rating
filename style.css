@@ -22,6 +22,7 @@ body{
     align-content: center;
     line-height: 1.5rem;
     font-size: 1rem;
+    font-family: 'overpass', sans-serif;
     min-height: 100vh;
     margin: auto auto;
 }
