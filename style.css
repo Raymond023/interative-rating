@@ -47,12 +47,19 @@ h1, h2{
 p, .button{
     color: var(--lightGrey);
 }
-.buttons-div{
+.buttons-ul{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 18px;
     justify-content: space-between;
     margin: 30px auto;
+    padding: 0;
+}
+li{
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 .button{
     border: 0;
@@ -60,16 +67,12 @@ p, .button{
     background-color: rgba(255, 255, 255, 0.06);
     padding: 15px;
 }
-.button:hover{
-    background-color: var(--orange);
-    color: var(--veryDarkBlue);
-    cursor: pointer;
-}
+
 .selected{
     background-color: var(--white);
     color: var(--veryDarkBlue);
 }
-.submit{
+.submit-btn{
     background-color: var(--orange);
     border: 0;
     border-radius: 22px;
@@ -79,13 +82,7 @@ p, .button{
     margin-bottom: 20px;
     width: 100%;
 }
-.submit:hover{
-    background-color: var(--white);
-    cursor: pointer;
-}
-.rating-section{
-    
-}
+
 .message{
     display: none;
     text-align: center;
@@ -107,5 +104,17 @@ p, .button{
     }   
     .buttons-div{
         column-gap: 30px;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .button:hover{
+        background-color: var(--orange);
+        color: var(--veryDarkBlue);
+        cursor: pointer;
+    }
+    .submit-btn:hover{
+        background-color: var(--white);
+        cursor: pointer;
     }
 }
