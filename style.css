@@ -18,8 +18,9 @@ font-size: 15px;
 
 body{
     background-color: var(--veryDarkBlue);
-    display: grid;
+    display: flex;
     align-content: center;
+    line-height: 1.5rem;
     font-size: 1rem;
     min-height: 100vh;
     margin: auto auto;
@@ -32,44 +33,79 @@ section{
     background-color: var(--darkBlue);
     border-radius: 10px;
     margin: auto auto;
-    width: clamp(300px, 85%, 360px);
-    padding: 20px;
+    width: clamp(300px, 80%, 500px);
+    padding: 25px 18px;
 }
 .star{
-    background-color: var(--veryDarkBlue);
+    background-color: rgba(255, 255, 255, 0.06);
     border-radius: 50%;
     padding: 20px;
 }
 h1, h2{
     color: var(--white);
 }
-p, .buttons>button{
+p, .button{
     color: var(--lightGrey);
 }
-.buttons{
-    display: flex;
+.buttons-div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 18px;
     justify-content: space-between;
-    margin: 25px auto;
+    margin: 30px auto;
 }
-.buttons>button{
+.button{
     border: 0;
     border-radius: 50%;
-    background-color: var(--veryDarkBlue);
-    padding: 17px;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 15px;
 }
-#submit{
+.button:hover{
+    background-color: var(--orange);
+    color: var(--veryDarkBlue);
+    cursor: pointer;
+}
+.selected{
+    background-color: var(--white);
+    color: var(--veryDarkBlue);
+}
+.submit{
     background-color: var(--orange);
     border: 0;
     border-radius: 22px;
     color: var(--veryDarkBlue);
     height: 40px;
     font-size: 1.2rem;
-    margin-bottom: 20px;width: 100%;
-
+    margin-bottom: 20px;
+    width: 100%;
+}
+.submit:hover{
+    background-color: var(--white);
+    cursor: pointer;
 }
 .rating-section{
-
+    
 }
 .message{
     display: none;
+    text-align: center;
+}
+.rating{
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 13px;
+    color: hsla(25, 97%, 53%, 0.747);
+    padding: 4px 20px;
+    width: fit-content;
+    margin: 10px auto;
+}
+@media screen and (min-width:500px) {
+    body{
+        font-size: 1.3rem;
+    }
+    section{
+        padding: 40px;
+    }   
+    .buttons-div{
+        column-gap: 30px;
+    }
 }

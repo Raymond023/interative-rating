@@ -6,7 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
+  <script src="jquery-3.7.1.min.js"></script>
+  <script defer src="script.js"></script>
 
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -18,7 +19,7 @@
         
         <section class="rating-section">
             
-            <img src="images/icon-star.svg" alt="an image of a star">
+            <img class="star" src="images/icon-star.svg" alt="an image of a star">
 
             <h1>How did we do?</h1>
             
@@ -27,15 +28,15 @@
                 to help us improve our offering!
             </p>
             
-            <div class="buttons">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
+            <div class="buttons-div">
+                <button type="button" id="1" class="button">1</button>
+                <button type="button" id="2" class="button">2</button>
+                <button type="button" id="3" class="button">3</button>
+                <button type="button" id="4" class="button">4</button>
+                <button type="button" id="5" class="button">5</button>
             </div>
 
-            <button type="submit" id="submit">Submit</button>
+            <button type="submit" class="submit">Submit</button>
             
         </section>  
         
@@ -43,7 +44,7 @@
             
             <img src="images/illustration-thank-you.svg" alt="image illustration saying thank you">
 
-            <p>
+            <p class="rating">
                 You selected <span class="user-rating"></span> out of 5    
             </p>
             
