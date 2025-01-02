@@ -37,6 +37,10 @@ main{
     max-width: 450px;
     padding: 25px 18px;
 }
+.hide{
+    display: none;
+}
+
 .star{
     background-color: rgba(255, 255, 255, 0.06);
     background-image: url(images/icon-star.svg);
@@ -83,7 +87,7 @@ label{
 }
 input{
     appearance: none;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     z-index: -1;
 }
@@ -125,7 +129,9 @@ label:has(input:checked){
     height: 150px;
     width: 230px;
 }
-
+.show{
+    display: block;
+}
 /* hover effect */
 
 .submit-btn:hover{
