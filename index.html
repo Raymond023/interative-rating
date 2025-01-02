@@ -24,7 +24,7 @@
         
         <section class="rating-section">
             
-            <img class="star" src="images/icon-star.svg" alt="an image of a star">
+            <span class="star"></span>
 
             <h1>How did we do?</h1>
             
@@ -32,31 +32,21 @@
                 Please let us know how we did with your support request. All feedback is appreciated 
                 to help us improve our offering!
             </p>
-            <form id="rating-form" action="#">
+            <form id="rating-form" action="#" method="post">
 
-                <ul class="buttons-ul" aria-label="rating options">
-                
-                    <li>
-                        <button type="button" id="1" class="button" aria-label="Rate 1">1</button>
-                    </li>
-    
-                    <li>
-                        <button type="button" id="2" class="button" aria-label="Rate 2">2</button>
-                    </li>
-    
-                    <li>
-                        <button type="button" id="3" class="button" aria-label="Rate 3">3</button>
-                    </li>
-    
-                    <li>
-                        <button type="button" id="4" class="button" aria-label="Rate 4">4</button>
-                    </li>
-    
-                    <li>
-                        <button type="button" id="5" class="button" aria-label="Rate 5">5</button>
-                    </li>
-                    
-                </ul>
+                <fieldset>
+                    <legend>User rating</legend>
+
+                    <label><input name="rating" type="radio" value="1">1</label>
+
+                    <label><input name="rating" type="radio" value="2">2</label>
+
+                    <label><input name="rating" type="radio" value="3">3</label>
+
+                    <label><input name="rating" type="radio" value="4">4</label>
+
+                    <label><input name="rating" type="radio" value="5">5</label>
+                </fieldset>
     
                 <button type="submit" class="submit-btn" aria-label="Submit rating">Submit</button>
 
@@ -65,20 +55,24 @@
             
         </section>  
         
-        <section class="message">
-            
-            <img src="images/illustration-thank-you.svg" alt="image illustration saying thank you">
+        <section aria-live="assertive" class="message-box">
 
-            <p class="rating">
-                You selected <span class="user-rating"></span> out of 5    
-            </p>
-            
-            <h2>Thank you!</h2>
+            <div class="message">
 
-            <p>
-                We appreciate you taking the time to give a rating. If you ever need more support, 
-                don’t hesitate to get in touch!
-            </p>
+                <span class="thanks"></span>
+
+                <p class="rating">
+                    You selected <span class="user-rating"></span> out of 5    
+                </p>
+                
+                <h2>Thank you!</h2>
+    
+                <p>
+                    We appreciate you taking the time to give a rating. If you ever need more support, 
+                    don't hesitate to get in touch!
+                </p>
+
+            </div>
 
         </section>
 
